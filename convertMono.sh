@@ -1,0 +1,3 @@
+y=${1%.*}
+echo converting $y ...
+ffmpeg -i $1 -ac 1 -acodec pcm_s16le -ar 16000 $y.wav
